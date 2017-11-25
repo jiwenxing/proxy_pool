@@ -12,11 +12,11 @@
 """
 __author__ = 'JHao'
 
-import sys
+import sys, os
 from multiprocessing import Process
 
-
-sys.path.append('../')
+path=os.path.abspath(os.curdir)
+sys.path.append(path)
 
 from Api.ProxyApi import run as ProxyApiRun
 from Schedule.ProxyValidSchedule import run as ValidRun
